@@ -23,18 +23,14 @@ jobs:
       uses: joshlk/jenkins-githubaction@V0.0.1
       with:
         # Jenkins URL including http/https protocol
-        url: ${{ secrets.JenkinsUrl }}
+        url: https://jenkins.zeus.panteon.games
         # Jenkins job name to build
-        job_name: ${{ secrets.JenkinsJobName }}
+        job_name: DevOps-ANRTest-IOS
         # Jenkins username
         username: ${{ secrets.JenkinsUsername }}
         # Jenkins API token
         api_token: ${{ secrets.JenkinsAPIToken }}
-        # Should the runner wait for the build to finish and provide ok status
-        wait: True
         # Timeout in seconds for build to complete
         timeout: 1800
         # How frequently in seconds to query Jenkins for build status
         interval: 10
-        # Specify build parameters with a .json format
-        parameters: '{"CleanBuild":true,"DebugMode":true,"LogMode":true,"LocalMode":true,"ClearLibrary":false,"Development":"None","Assets/Game/Textures/icon.png":"(No file was uploaded)"}'
