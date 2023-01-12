@@ -32,6 +32,7 @@ jobs:
         # Should the runner wait for the build to finish and provide ok status
         wait: True
         # Timeout in seconds for build to complete
-        timeout: 1800
+        timeout: 60
         # How frequently in seconds to query Jenkins for build status
         interval: 10
+        parameters: '{"CleanBuild":true,"DebugMode":true,"LogMode":true,"LocalMode":true,"ClearLibrary":false,"Development":"None","Assets/Game/Textures/icon.png":"(No file was uploaded)"}'
